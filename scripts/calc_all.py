@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
-"""
-Kurulum:  pip install zstandard
 
-Kullanım:
-  python msbt_say.py ceviri_klasoru
-  python msbt_say.py ceviri_klasoru ornek_klasoru
-  python msbt_say.py ceviri_klasoru ornek_klasoru --liste
-  python msbt_say.py ceviri_klasoru ornek_klasoru --min 2
-"""
-import os
+import os, shutil
 import struct
 import argparse
 import zstandard
@@ -131,15 +123,21 @@ def parse_msbt(path):
 
 def load_folder(folder):
     """{göreli_dosya: {label: metin}}"""
+    
+    tmp = os.path.join(folder, OUT_DIR)
+    shutil.rmtree(tmp, ignore_errors=True)
     result = {}
-    for rel, full in extract_zst(folder).items():
-        try:
-            m = parse_msbt(full)
-        except Exception as ex:
-            print(f'  ! okunamadı: {rel} ({ex})')
-            continue
-        if m is not None:
-            result[rel] = m
+    try:
+        for rel, full in extract_zst(folder).items():
+            try:
+                m = parse_msbt(full)
+            except Exception as ex:
+                print(f'  ! okunamadı: {rel} ({ex})')
+                continue
+            if m is not None:
+                result[rel] = m
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
     return result
 
 
