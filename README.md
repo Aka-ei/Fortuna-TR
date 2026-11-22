@@ -1,7 +1,7 @@
 # Fortuna-TR
 
 ![Discord](https://img.shields.io/discord/1335580256987254804?style=for-the-badge&logo=discord&label=Akaei&color=7289da)
-![Static Badge](https://img.shields.io/badge/%C4%B0lerleme-0.1/526-red?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/%C4%B0lerleme-0.17/526-red?style=for-the-badge)
 
 Bu proje Fire Emblem: Fortune's Weave adlı oyun için yapılmış WIP(Work In Progress) Türkçe çeviri modudur.
 
