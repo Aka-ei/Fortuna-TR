@@ -1,0 +1,425 @@
+game: "Fire Emblem: Fortuna's Weave"
+description: "Description for the game config"
+msbt:
+  fixedLabelGroups: false
+  attributes:
+    - name: Condition1 
+      type: str
+    - name: Condition2 
+      type: str
+    - name: Condition3 
+      type: str
+    - name: PID
+      type: str
+    - name: MPID
+      type: str
+    - name: Looks
+      type: str
+    - name: Expression
+      type: str
+    - name: Event
+      type: str
+    - name: Sound
+      type: str
+    - name: RecollectionDefault
+      type: str
+    - name: First
+      type: str
+    - name: Favorability
+      type: enum
+      values: [None,Excellent,VeryGood,Good,Poor,VeryPoor,Unacceptable]
+    - name: Still
+      type: str
+    - name: Jump
+      type: str
+    - name: PartVoice
+      type: enum
+      values: [None,Greeting1,Greeting2,AfternoonGreeting1,AfternoonGreeting2,NightGreeting1,NightGreeting2,Calling1,Calling2,Calling3,CallingSavior,Delight,Angry,Furious,Sorrow,Surprise,Laughter,Thought1,Thought2,Praise,Gratitude,GreatGratitude,Resolve,Despair,Shock,Amaze,Bewilderment,Contempt,Positive,Negative,Please,BringTopics,CompileTopics,ChangeTopics,StartTopics,EndTopics,Suggestion,Reply,Yes,No,Apathy,ActJoy,ActAngry,ActSad,ActAgony,ActLaugh,ActBravery,ActLove,ActHate,HubCallOut,Hur_cry,Anh_divination,Ism_assist1,Ism_assist2,Ism_assist3,Ism_assist4,Ism_assist5,Ver_gameset1,Ver_gameset2,Ver_gameset3,Ver_speech1,Ver_speech2,Ver_speech3,Ver_call1,Ver_call2,Ver_call3,Ver_call4,Ver_call5,Ver_call6,Ver_call7,Ver_call8,Ver_call9,Ver_call10,Ver_call11,Ver_call12,Ver_call13,Ver_closing1,Ver_closing2,Ver_closing3]
+    - name: PartVoiceEffect
+      type: Enum
+      values: [None,UnderWater,Transmission,Space,Deformation]
+    - name: FavorabilityPID
+      type: str
+    - name: LipSync
+      type: Enum
+      values:  [Normal,LittleShort,None]
+    - name: ConditionConjunction
+      type: Enum
+      values: [And,Or]
+    - name: ReferenceJPja
+      type: str
+    - name: ReferenceUSen
+      type: str
+    - name: Section
+      type: Enum
+      values: [Sec-None,Sec-Main,Sec-2nd,Sec-Bel,Sec-Tal,Sec-Orh,Sec-Anh,Sec-Ignore,Sec-First-Bel-Tal,Sec-First-Bel-Orh,Sec-First-Bel-Anh,Sec-First-Tal-Orh,Sec-First-Tal-Anh,Sec-First-Orh-Anh,Sec-Later-Bel-Tal,Sec-Later-Bel-Orh,Sec-Later-Bel-Anh,Sec-Later-Tal-Orh,Sec-Later-Tal-Anh,Sec-Later-Orh-Anh,Sec-2nd-Last,Sec-P1-A,Sec-P1-D,Sec-P2-A,Sec-P2-D,Sec-P3-A,Sec-P3-D,Sec-P0-A]
+    - name: Use
+      type: Enum
+      values: [none,0ISM_c01,0ISM_c02,0ISM_c03,1_multi,1KAI_c01,1KAI_c02,1KAI_c03,1KAI_c04,1KAI_c05,1KAI_c06,1KAI_c07,1KAI_c08,1KAI_c09,1KAI_c10,1KAI_c11,1KAI_c12,1DIT_c01,1DIT_c02,1DIT_c03,1DIT_c04,1DIT_c05,1DIT_c06,1DIT_c07,1DIT_c08,1DIT_c09,1DIT_c10,1DIT_c11,1DIT_c12,1SEO_c01,1SEO_c02,1SEO_c03,1SEO_c04,1SEO_c05,1SEO_c06,1SEO_c07,1SEO_c08,1SEO_c09,1SEO_c10,1SEO_c11,1SEO_c12,1LED_c01,1LED_c02,1LED_c03,1LED_c04,1LED_c05,1LED_c06,1LED_c07,1LED_c08,1LED_c09,1LED_c10,1LED_c11,1LED_c12,1BEL_c01,1BEL_c02,1BEL_c03,1BEL_c04,1BEL_c05,1BEL_c06,1BEL_c07,1BEL_c08,1BEL_c09,1BEL_c10,1BEL_c11,1BEL_c12,1TAL_c01,1TAL_c02,1TAL_c03,1TAL_c04,1TAL_c05,1TAL_c06,1TAL_c07,1TAL_c08,1TAL_c09,1TAL_c10,1TAL_c11,1TAL_c12,1ORH_c01,1ORH_c02,1ORH_c03,1ORH_c04,1ORH_c05,1ORH_c06,1ORH_c07,1ORH_c08,1ORH_c09,1ORH_c10,1ORH_c11,1ORH_c12,1ORH_c13,1ANH_c01,1ANH_c02,1ANH_c03,1ANH_c04,1ANH_c05,1ANH_c06,1ANH_c07,1ANH_c08,1ANH_c09,1ANH_c10,1ANH_c11,1ANH_c12,2XXX_c01,2XXX_c02,2XXX_c03,2XXX_c04,2XXX_c05,2XXX_c06,Lobby,SupportEvent,ActionVoice,PartVoice,Activity_Serve,Activity_ArenaTrain,Activity_Thermae,Activity_StageAct,Activity_StageWatch,Activity_Meal,Activity_Bird,SideStory_Kai,SideStory_Ditlih,SideStory_Seodola,SideStory_Leda,SideStory_Beltran,SideStory_Talimun,SideStory_Orhel,SideStory_Anhatolyah,Chapter,3ISM_c01,3ISM_c02,3ISM_c03,3ISM_c04,3ISM_c05,3ISM_c06,SideStory_Soleil,LG_Sub,System]
+    - name: Speaker
+      type: Enum
+      values: [None,Sothis,Dagda,Jura,Soleil,Mars,Smirnoth,Clair,Cara,Fotona,JuFas,Aurora,Rora,Balor,Lyra,Laksa,Isheth,Ileana,Marna,Maria,Martira,Ishmal,Kai,Kai_old,Ditlih,Seodola,Leda,Beltran,Talimun,Orhel,Anhatolyah,Tiara,Tiara_old,Peter,Peter_old,Hurtando,Maxim,Jester,Goliath,Gates,Dante,Fabio,Esmeralda,Michaela,Ursula,Simon,Lourdija,Fianna,Diego,Loretta,Loretta_old,Seteth,Niney,Bonaparte,Tobias,Lillian,Lysander,Buccaneer,Scirocco,Moo,Moo_old,Olympia,Nazha,Sarang,Daitoh,Halvin,Alexandra,Gujaran,Yanghai,Io,Pepe,Noctura,Sophia,Catania,Nedine,Zaccone,Majiide,Venditz,Inioni,Jasmine,Cleobulus,Myson,Nathan,Hrih,Long,Troja,Nomvethe,Anna,Castor,Centlion,Aswan,Tahuonia,Gradius,Gruadin,Krapka,Hoover,Octal,KonMoe,Gillquils,Baanbahn,Nuzzo,Shinra,Kouka,Hyoushi,Ganshin,Lindo,Kiroica,Suarez,Cirnesh,Cheyen,Zenzel,Harrison,Gervasio,Kyo,Karl,Boussoufa,Taileron,Dayan,Mandalan,Madl,Lechner,Verafi,Guizi,Nassim,Langa,Tulls,Gabriel,Orpheus,Zenon,Roxana,Miwai,Hasdrubal,Carina,Tsiskaridze,Zoni,Esprit,Quijermo,Bjor,Bolboa,Domingo,Breza,Getomeja,AragotheGreat,Hedda,Drake,Bandar,Januarius,Winnikius,Llewellyn,Ketos,Samba,Coubadja,Yashin,Mahamadou,Cohen,Hanno,Tendre,Katarina,Hannibal,Otto,monster_ornius,monster_atlasbear,Narration,oldmanA,oldmanB,oldwomanA,oldwomanB,middlemanA,middlemanB,middlemanC,middlemanD,middlemanE,middlemanF,middlewomanA,middlewomanB,middlewomanC,middlewomanD,middlewomanE,middlewomanF,youngmanA,youngmanB,youngmanC,youngmanD,youngmanE,youngmanF,youngwomanA,youngwomanB,youngwomanC,youngwomanD,youngwomanE,youngwomanF,childmanA,childmanB,childwomanA,childwomanB,extra1,extra2,extra3,mob_man,mob_woman,NoVoice_Choice,NoVoice,Seodola_young,Dayan_young,Ishmal_F,Kyo_old,Benedictus,Guardianofgrave]
+    - name: Voice_Type
+      type: Enum
+      values: [NoVoice,ADR,Timed,Wild]
+    - name: Voice_Timing
+      type: str
+    - name: Voice_Timing_EN
+      type: str
+    - name: Voice_File_Name
+      type: str
+    - name: VoicePlay_JP
+      type: str
+    - name: VoicePlay_EN
+      type: str
+    - name: USen_Status
+      type: Enum
+      values: [None,Use_JP,Duplicate,Not_Recorded,Recorded,Under_Review,Delivered,Pickup,EN_Duplicate]
+    - name: USen_Direction
+      type: str
+    - name: USen_Batch
+      type: Enum
+      values: [Null,Batch_1,Batch_2,Batch_3,Batch_4,Batch_5,Batch_7,Batch_8A,Batch_8B,Batch_9A,Batch_9B,Batch_10,Batch_ADR,TBD,Final_Pickups]
+    - name: USen_Voice_Tech
+      type: str
+    - name: NOE_Translation
+      type: Enum
+      values: [Yes,No]
+    - name: Audio_Check_Notes
+      type: str
+    - name: Rercording
+      type: str
+    - name: Check
+      type: str
+    - name: PIDComment
+      type: str
+    - name: PIDComment_EN
+      type: str
+    - name: ExpressionComment_EN
+      type: str
+  tags:
+    # System
+    - name: Ruby
+      description: ruby annotation rendered above the normal text
+      group: 0
+      type: 0
+      arguments:
+        - name: rt
+          description: the annotation text
+          dataType: str
+    - name: Font
+      group: 0
+      type: 1
+      arguments:
+        - name: face
+          dataType: str
+    - name: Size
+      description: changes the current text size
+      group: 0
+      type: 2
+      arguments:
+        - name: percent
+          description: relative text size in percent
+          dataType: u16
+        - name: size
+          description: relative text size
+          dataType: str
+    - name: Color
+      description: Changes the current text color
+      group: 0
+      type: 3
+      arguments:
+        - name: name
+          description: id of the color
+          dataType: s16
+          valueMap:
+            0: SystemText
+            1: SystemBG
+            2: TalkText
+            3: TalkBG
+            4: AccentText
+            5: MonologueText
+            255: Default
+    - name: pageBreak
+      description: forces a new dialog page
+      group: 0
+      type: 4
+    - name: Reference
+      description: Refer to a message
+      group: 0
+      type: 5
+      arguments:
+        - name: mstxt
+          dataType: str
+        - name: label
+          dataType: str
+        - name: lang
+          dataType: str
+    # Arg
+    - name: Arg0
+      group: 1
+      type: 0
+    - name: Arg1
+      group: 1
+      type: 1
+    - name: Arg2
+      group: 1
+      type: 2
+    - name: Arg3
+      group: 1
+      type: 3
+    - name: Arg4
+      group: 1
+      type: 4
+    - name: TalkArg0
+      group: 1
+      type: 5
+    - name: TalkArg1
+      group: 1
+      type: 6
+    - name: TalkArg2
+      group: 1
+      type: 7
+    # Name
+    - name: Hero
+      group: 2
+      type: 0
+    - name: Route
+      group: 2
+      type: 1
+    # Ebedded
+    - name: Icon
+      group: 3
+      type: 0
+      arguments:
+        - name: name
+          dataType: u8
+    # SorM
+    - name: SorMArg0
+      group: 4
+      type: 0
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMArg1
+      group: 4
+      type: 1
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMArg2
+      group: 4
+      type: 2
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMArg3
+      group: 4
+      type: 3
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMArg4
+      group: 4
+      type: 4
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMTalkArg0
+      group: 4
+      type: 5
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMTalkArg1
+      group: 4
+      type: 6
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    - name: SorMTalkArg2
+      group: 4
+      type: 7
+      arguments:
+        - name: Single 
+          dataType: str
+        - name: Multi 
+          dataType: str
+    # PorN
+    - name: PorNArg0
+      group: 5
+      type: 0
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNArg1
+      group: 5
+      type: 1
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNArg2
+      group: 5
+      type: 2
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNArg3
+      group: 5
+      type: 3
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNArg4
+      group: 5
+      type: 4
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNTalkArg0
+      group: 5
+      type: 5
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNTalkArg1
+      group: 5
+      type: 6
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    - name: PorNTalkArg2
+      group: 5
+      type: 7
+      arguments:
+        - name: Positive 
+          dataType: str
+        - name: Negative
+          dataType: str
+    
+    # Article
+    - name: ArticleArg0
+      group: 6
+      type: 0
+    - name: ArticleArg1
+      group: 6
+      type: 1
+    - name: ArticleArg2
+      group: 6
+      type: 2
+    - name: ArticleArg3
+      group: 6
+      type: 3
+    - name: ArticleArg4
+      group: 6
+      type: 4
+    
+    # DateTime
+    - name: term_month
+      group: 7
+      type: 0
+    - name: term_day
+      group: 7
+      type: 1
+    - name: term_hour
+      group: 7
+      type: 2
+    - name: term_minute
+      group: 7
+      type: 3
+    - name: SideStory_month
+      group: 7
+      type: 4
+      arguments:
+        - name: character
+          dataType: u8
+          typeMap: 
+            0: Kai
+            1: Dit
+            2: Seo
+            3: Led
+            4: Bel
+            5: Tal
+            6: Orh
+            7: Anh
+            8: Sol
+    - name: SideStory_day
+      group: 7
+      type: 5
+      arguments:
+        - name: character
+          dataType: u8
+          typeMap: 
+            0: Kai
+            1: Dit
+            2: Seo
+            3: Led
+            4: Bel
+            5: Tal
+            6: Orh
+            7: Anh
+            8: Sol
+    # Localize
+    - name: MFTag
+      group: 8
+      type: 0
+      arguments:
+        - name: male
+          dataType: str
+        - name: female
+          dataType: str
+    - name: CAP
+      group: 8
+      type: 1
+    - name: UNCAP
+      group: 8
+      type: 2
+    - name: UNCAP_Release
+      group: 8
+      type: 3
+    - name: UNCAPAll
+      group: 8
+      type: 4
+    - name: UNCAPAll_End
+      group: 8
+      type: 5
+    - name: CNthird
+      group: 8
+      type: 6
+    - name: TWthird
+      group: 8
+      type: 7
+    - name: KRppn01
+      group: 8
+      type: 8
+    - name: KRppn02
+      group: 8
+      type: 9
