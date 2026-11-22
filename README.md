@@ -37,3 +37,7 @@ Projeyi desteklemeden önce [Katkı.md](CONTRIBUTING.MD) okuyun
 ### Konsol
 
 <!-- TODO:  -->
+
+## İlerleme
+
+<iframe width="600" height="600" src="ilerleme.html" ></iframe>
