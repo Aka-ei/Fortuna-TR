@@ -7,7 +7,7 @@ Kullanım:
   python ilerleme_rapor.py ceviri_klasoru ornek_klasoru --cikti rapor --min 2
   python ilerleme_rapor.py ceviri_klasoru ornek_klasoru --genislik 2400
 """
-import os
+import os, html
 import colorsys
 import argparse
 from PIL import Image, ImageDraw, ImageFont
@@ -173,13 +173,49 @@ def write_jpg(path, stats, overall, W):
 
     img.save(path, 'JPEG', quality=92)
 
+def write_html(path, stats, overall):
+    items = sorted(stats.items(), key=lambda kv: -kv[1]['total'])
+    W, H = 1000, 600
+    rects = squarify([s['total'] for _, s in items], W, H)
+
+    boxes = []
+    for (name, s), (x, y, w, h) in zip(items, rects):
+        p = pct(s['done'], s['total'])
+        color = f'hsl({p * 1.2:.0f},60%,38%)'
+        short = os.path.basename(name)
+        tip = (f'{name}\nİlerleme: %{p:.1f}\nÇevrilen: {s["done"]}/{s["total"]}\n'
+               f'Aynı kalan: {s["same"]}  Eksik: {s["missing"]}')
+        boxes.append(
+            f'<div class="b" style="left:{x / W * 100:.4f}%;top:{y / H * 100:.4f}%;'
+            f'width:{w / W * 100:.4f}%;height:{h / H * 100:.4f}%;background:{color}" '
+            f'title="{html.escape(tip)}"><div class="t"><b>{html.escape(short)}</b><br>'
+            f'%{p:.0f} · {s["done"]}/{s["total"]}</div></div>')
+
+    page = f'''<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><title>Çeviri İlerlemesi</title>
+<style>
+body{{font-family:system-ui,sans-serif;background:#1b1b1f;color:#eee;margin:24px}}
+.tm{{position:relative;width:100%;max-width:1400px;aspect-ratio:{W}/{H};background:#000}}
+.b{{position:absolute;box-sizing:border-box;border:1px solid #1b1b1f;overflow:hidden}}
+.b:hover{{outline:2px solid #fff;z-index:2}}
+.t{{padding:4px 6px;font-size:12px;line-height:1.3;color:#fff;text-shadow:0 1px 2px #000}}
+.leg{{height:12px;max-width:300px;margin:8px 0;border-radius:6px;
+background:linear-gradient(90deg,hsl(0,60%,38%),hsl(60,60%,38%),hsl(120,60%,38%))}}
+</style></head><body>
+<h2>Çeviri İlerlemesi: %{overall:.1f}</h2>
+<div>Alan = metin sayısı · Renk = tamamlanma yüzdesi</div>
+<div class="leg"></div><div style="max-width:300px;display:flex;justify-content:space-between;font-size:12px"><span>%0</span><span>%100</span></div><br>
+<div class="tm">{''.join(boxes)}</div>
+</body></html>'''
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(page)
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('klasor', help='Çevrilen dosyaların klasörü')
     ap.add_argument('ornek', help='Örnek (kaynak) klasör')
     ap.add_argument('--min', type=int, default=2, help='Geçerli en kısa metin uzunluğu')
-    ap.add_argument('--cikti', default='assets/ilerleme', help='Çıktı dosya adı (uzantısız)')
+    ap.add_argument('--cikti', default='ilerleme', help='Çıktı dosya adı (uzantısız)')
     ap.add_argument('--genislik', type=int, default=1600, help='Görsel genişliği (px)')
     a = ap.parse_args()
 
@@ -194,7 +230,9 @@ def main():
     D = sum(s['done'] for s in stats.values())
     overall = pct(D, T)
 
-    out = a.cikti + '.jpg'
+    write_html(f"docs/{a.cikti}.html", stats, overall)
+
+    out = f"assets/{a.cikti}.jpg"
     write_jpg(out, stats, overall, a.genislik)
     print(f'Genel ilerleme: %{overall:.1f}  ({D}/{T}, kalan {T - D})')
     print(f'Yazıldı: {out}')
