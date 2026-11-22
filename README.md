@@ -40,4 +40,4 @@ Projeyi desteklemeden önce [Katkı.md](CONTRIBUTING.MD) okuyun
 
 ## İlerleme
 
-[![İlerleme](assets/ilerleme.jpg)](docs/ilerleme.html)
+[![İlerleme](assets/ilerleme.jpg)](aka-ei.github.io/Fortuna-TR/ilerleme.html)
