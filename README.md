@@ -40,4 +40,4 @@ Projeyi desteklemeden önce [Katkı.md](CONTRIBUTING.MD) okuyun
 
 ## İlerleme
 
-<iframe width="600" height="600" src="ilerleme.html" ></iframe>
+[![İlerleme](assets/ilerleme.jpg)](ilerleme.html)
