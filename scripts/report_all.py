@@ -3,9 +3,9 @@
 Dosya adı: ilerleme_rapor.py   (msbt_say.py ile aynı klasörde olmalı)
 
 Kullanım:
-  python .\scripts\report_all.py .\romfs\Msg\EUen\ .\romfs\Msg\USen
-  python .\scripts\report_all.py .\romfs\Msg\EUen\ .\romfs\Msg\USen --cikti rapor --min 2
-  python .\scripts\report_all.py .\romfs\Msg\EUen\ .\romfs\Msg\USen --genislik 2400
+  python .\\scripts\\report_all.py .\\romfs\\Msg\\EUen\\ .\\romfs\\Msg\\USen
+  python .\\scripts\\report_all.py .\\romfs\\Msg\\EUen\\ .\\romfs\\Msg\\USen --cikti rapor --min 2
+  python .\\scripts\\report_all.py .\\romfs\\Msg\\EUen\\ .\\romfs\\Msg\\USen --genislik 2400
 """
 import os, html
 import colorsys
