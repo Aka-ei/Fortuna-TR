@@ -81,6 +81,9 @@ Tablolarda bulunmayan bir isimle karşılaştığınızda önce aşağıdaki son
 | Divine Sovereign              | 神威法王                           | Kutsal Hükümdar               |
 | Anna                          | アンナ                             |                               |
 
+Akkuş
+The White Bird
+
 ## Klan isimleri
 
 | İngilizce                 | Japonca        | Romaji                     | Türkçe                     |
@@ -105,13 +108,14 @@ Tablolarda bulunmayan bir isimle karşılaştığınızda önce aşağıdaki son
 | Kingdom of Arago     | アラゴ王国       | Arago ōkoku       | Aragon Krallığı     |
 | Kingdom of Brezarant | ブレザラント王国 | Burezaranto ōkoku | Brezarant Krallığı  |
 | Feena                | フィーナ         | Fīna              | Fina                |
-| 禁断の地             | Kindan no chi    |                   | Yasak topraklar     |
+| Forbidden Land       | 禁断の地         | Kindan no chi     | Yasak topraklar     |
 | Megaira              | メガエラ         | Megaera           | Megaira             |
 | Fort Zanbar          | ザンジバル要塞   | Zanjibaru yōsai   | Zanzibar Hisarı     |
 | Baphos               | バフォス         | Bafosu            | Bafos               |
 | Cydonia              |                  |                   | Kidonya             |
 | Ortill               |                  |                   | Ortill              |
 | Fódlan               | フォドラ         | Fodora            | Fódlan              |
+| Cybele               |                  |                   | Kibele              |
 
 ## Sınıflar
 
